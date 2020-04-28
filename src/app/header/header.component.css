@@ -1,0 +1,25 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.header-darkmode{
+  display: flex;
+  justify-content: space-between;
+  background-color: #2b3743;
+  -webkit-text-fill-color: white;
+}
+.darkmode{
+  background-color: #ffffff;
+    border-radius: 4px;
+    height: 35px;
+    border-color: whitesmoke;
+    margin: 20px;
+}
+.darkmode-on{
+   background-color: #2b3743;
+    border-radius: 4px;
+    height: 35px;
+    border-color: lightslategrey;
+    margin: 20px;
+}
