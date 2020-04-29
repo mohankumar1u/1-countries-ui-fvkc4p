@@ -6,7 +6,7 @@ import { SingleCountryComponent } from '../single-country/single-country.compone
 
 const routes: Routes = [ 
   { path: 'countries',component: CountriesComponent},
-  { path:'SingleCountryDetails',component:SingleCountryComponent}
+  { path:'SingleCountryDetails/:id',component:SingleCountryComponent}
 ];
  
 
