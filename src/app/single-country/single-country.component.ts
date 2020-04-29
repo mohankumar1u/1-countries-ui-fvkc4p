@@ -20,8 +20,8 @@ export class SingleCountryComponent implements OnInit {
   ngOnInit() {
      this.cards = localStorage.getItem('countries')
     let id = this.router.snapshot.paramMap.get('id');
-    console.log(id),"id";
-    this.selectedCard = this.cards[id];
+    console.log(id,"id");
+   // this.selectedCard = this.cards.id;
       
   }
 
