@@ -24,7 +24,7 @@
 				</div>
 			</div>
 			<div class="borders">border countries:
-				<button  (click)="goToBorderCard(border)" [className]="darkmode == 'darkmode-off' ? 'border' : 'border-darkmode'" *ngFor="let border of cardborders">{{border.name}} </button>
+				<button  (click)="goToBorderCountry(border)" [className]="darkmode == 'darkmode-off' ? 'border' : 'border-darkmode'" *ngFor="let border of borders">{{border.name}} </button>
 			</div>
 		</div>
 
