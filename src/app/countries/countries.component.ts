@@ -1,6 +1,7 @@
 import { Component, OnInit, Pipe, PipeTransform  } from '@angular/core';
 import { CountriesService } from './countries.service'
 import {Routes, RouterModule, Router} from '@angular/router';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-countries',
@@ -13,11 +14,13 @@ export class CountriesComponent implements OnInit {
   region = [];
   selectedBrand = "filter by Region";
   searchText;
+  darkmode:string;
 
-  constructor(private router: Router, private countriesService:CountriesService ) { }
+  constructor(private router: Router, private countriesService:CountriesService, private commonService:CommonService) { }
 
   ngOnInit() {
     this.loadCountries();
+    this.commonService.darkmodeStatus.subscribe(darkmode=>this.darkmode=darkmode);
     }
   loadCountries=()=>{
     this.countriesService.getCardDetails().subscribe(element => {

@@ -10,11 +10,12 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CountriesService } from './countries/countries.service';
 import { CountryCardComponent } from './countries/country-card/country-card.component';
+import { CommonService } from './common.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, Ng2SearchPipeModule ],
   declarations: [ AppComponent, HeaderComponent, CountriesComponent, SingleCountryComponent, CountryCardComponent,],
   bootstrap:    [ AppComponent ],
-  providers: [CountriesService]
+  providers: [CountriesService, CommonService]
 })
 export class AppModule { }
