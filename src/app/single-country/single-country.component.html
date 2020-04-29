@@ -1,26 +1,26 @@
-<button (click)="onBackToList()" [className]="darkmode == 'darkmode-off' ? 'backToList' : 'backToList-darkmode'">back</button>
+<button (click)="onBackToCountries()" [className]="darkmode == 'darkmode-off' ? 'backToList' : 'backToList-darkmode'">back</button>
 <div></div>
 <div [className]="darkmode == 'darkmode-off' ? 'selectedItemData' : 'selectedItemData-darkmode'">
-	<div class="selectedItemImg"><img src={{selectedCard.flag}} alt="flag" class="flags"/></div>
+	<div class="selectedItemImg"><img src={{selectedCountry.flag}} alt="flag" class="flags"/></div>
 		<div class="details">
-			<div class="countryName">{{selectedCard.name}}</div>
+			<div class="countryName">{{selectedCountry.name}}</div>
 			<div class="selectedItemDetails">
 				<div>
-					<div> <span>Native Name: </span>{{selectedCard.nativeName}}</div>
-					<div> <span>population: </span>{{selectedCard.population}}</div>
-					<div> <span>region: </span>{{selectedCard.region}}</div>
-					<div> <span>Sub Region: </span>{{selectedCard.subregion}}</div>
-					<div><span>capital: </span>{{selectedCard.capital}}</div>
+					<div> <span>Native Name: </span>{{selectedCountry.nativeName}}</div>
+					<div> <span>population: </span>{{selectedCountry.population}}</div>
+					<div> <span>region: </span>{{selectedCountry.region}}</div>
+					<div> <span>Sub Region: </span>{{selectedCountry.subregion}}</div>
+					<div><span>capital: </span>{{selectedCountry.capital}}</div>
 				</div>
 				<div>
-            <div> <span>Top Level Domain: </span>{{selectedCard.topLevelDomain}}</div>
+            <div> <span>Top Level Domain: </span>{{selectedCountry.topLevelDomain}}</div>
 						<div>
-							<span>currencies: </span><span *ngFor="let currencie of selectedCard.currencies">{{currencie.name}}, </span>
+							<span>currencies: </span><span *ngFor="let currencie of selectedCountry.currencies">{{currencie.name}}, </span>
 						</div>
 						<div>
-							<span>languages: </span><span *ngFor="let language of selectedCard.languages">{{language.name}}, </span>
+							<span>languages: </span><span *ngFor="let language of selectedCountry.languages">{{language.name}}, </span>
 						</div>
-						<div> <span>Sub Region: </span>{{selectedCard.subregion}}</div>
+						<div> <span>Sub Region: </span>{{selectedCountry.subregion}}</div>
 				</div>
 			</div>
 			<div class="borders">border countries:

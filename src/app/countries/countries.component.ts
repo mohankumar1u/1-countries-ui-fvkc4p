@@ -21,9 +21,9 @@ export class CountriesComponent implements OnInit {
     }
   loadCountries=()=>{
     this.countriesService.getCardDetails().subscribe(element => {
-      console.log(element, "cards")
+      //console.log(element, "cards")
       this.cards = element;
-       console.log(this.cards)
+       //console.log(this.cards)
        localStorage.setItem('countries', this.cards);
 
       let obj = [];
