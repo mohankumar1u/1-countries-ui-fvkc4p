@@ -12,7 +12,7 @@ export class CountriesComponent implements OnInit {
   cards: any;
   title = "Angular Search Using ng2-search-filter";
   region = [];
-  selectedBrand = "filter by Region";
+  selectedBrand = "All";
   searchText;
   darkmode:string;
 
@@ -36,7 +36,7 @@ export class CountriesComponent implements OnInit {
       this.region = obj.filter(function(item, pos, self) {
         return self.indexOf(item) == pos;
       });
-      this.region[6] = "filter by Region";
+      this.region[6] = "All";
       console.log(this.region);
   });
   };

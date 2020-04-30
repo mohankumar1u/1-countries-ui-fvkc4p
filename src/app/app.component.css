@@ -1,5 +1,5 @@
 p {
-  font-family: Lato;
+  font-family: Calibri;
 }
 body {
     margin: 0px;
@@ -8,4 +8,14 @@ body {
 html {
     margin: 0px;
     padding: 0px;
+}
+.home {
+  background-color: #fafafa;
+   font-family: Calibri;
+   padding-bottom: 20%
+}
+.home-darkmode{
+  background-color: #202d36;
+   font-family: Calibri;
+   padding-bottom: 20%
 }

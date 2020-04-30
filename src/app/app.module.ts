@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,11 +11,20 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CountriesService } from './countries/countries.service';
 import { CountryCardComponent } from './countries/country-card/country-card.component';
 import { CommonService } from './common.service';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, Ng2SearchPipeModule ],
-  declarations: [ AppComponent, HeaderComponent, CountriesComponent, SingleCountryComponent, CountryCardComponent,],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, Ng2SearchPipeModule,
+    MatFormFieldModule, MatSelectModule, MatInputModule,BrowserAnimationsModule,  ReactiveFormsModule ],
+  declarations: [ AppComponent, HeaderComponent, CountriesComponent, SingleCountryComponent, CountryCardComponent],
   bootstrap:    [ AppComponent ],
-  providers: [CountriesService, CommonService]
+  providers: [  { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+  CountriesService, CommonService]
 })
 export class AppModule { }

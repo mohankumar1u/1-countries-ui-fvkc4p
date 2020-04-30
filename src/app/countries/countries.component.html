@@ -1,9 +1,11 @@
 <input [className]="darkmode == 'darkmode-off' ? 'search' : 'search-darkmode'" type="text" name="search" [(ngModel)]
       ="searchText"  placeholder="search for country" >
-<label [className]="darkmode == 'darkmode-off' ? 'filterLabel' : 'filterLabel-darkmode'"></label>
-<select name="filter by Region" [(ngModel)]="selectedBrand" (change)="valueSelected()" [className]="darkmode == 'darkmode-off' ? 'filter' : 'filter-darkmode'">
-         <option value={{item}} *ngFor="let item of this.region">{{ item }}</option>
-     </select>
+      <mat-form-field>
+<mat-label [className]="darkmode == 'darkmode-off' ? 'filterLabel' : 'filterLabel-darkmode'">filter by Region</mat-label>
+<mat-select matNativeControl name="filter by Region" [(ngModel)]="selectedBrand" (change)="valueSelected()" [className]="darkmode == 'darkmode-off' ? 'filter' : 'filter-darkmode'">
+         <mat-option value={{item}} *ngFor="let item of this.region">{{ item }}</mat-option>
+     </mat-select>
+      </mat-form-field>
 <div class="cardsHoalder">
   <app-country-card [OneInput]="{card: card, selectedBrand: selectedBrand, searchText:searchText, darkmode:darkmode, index:index}"
 		*ngFor="let card of cards | filter:searchText; let index = index"></app-country-card>
