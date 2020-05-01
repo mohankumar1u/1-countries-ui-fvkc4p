@@ -1,3 +1,12 @@
+.filter-search-holder{
+  display:flex;
+}
+
+.filter-holder{
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
 .search{
    border-color: whitesmoke;
     border-radius: 4px;
@@ -18,9 +27,18 @@
     box-sizing: border-box;
      padding: 17px;
 }
+.filterLabel{
+ margin-left: 10%;
+ border-color: whitesmoke;
+ background-color: white;
+ width: 8.4em;
+ border-radius: 4px 4px 0px 4px;
+}
 .filterLabel-darkmode{
+  background-color: #2b3743;
    -webkit-text-fill-color: white;
-   padding: 25px;
+ width: 8.4em;
+ border-radius: 4px 4px 0px 4px;
 }
 .filter-darkmode{
    background-color: #2b3743;
@@ -30,13 +48,15 @@
      margin-left: 10%;
     border-radius: 4px;
     border-color: lightslategrey;
+    width:10em;
 }
 .filter{
   box-sizing: border-box;
-    padding: 5px;
+    padding: 0px 5% 5% 5% ;
     border-radius: 4px;
     margin-left: 10%;
-    border-color: whitesmoke;
+    border-color: transparent;
+    width: 10em;
 }
 .cardsHoalder {
   display: flex;
