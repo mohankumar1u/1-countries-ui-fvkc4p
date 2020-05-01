@@ -18,7 +18,7 @@
 }
 .search-darkmode{
   border-color:  lightslategrey;
-    border-radius: 4px;
+  border-radius: 4px;
    width: 45%;
     margin: 5% 10%;
     height: 30px;
@@ -33,30 +33,35 @@
  background-color: white;
  width: 8.4em;
  border-radius: 4px 4px 0px 4px;
+ text-align: center;
 }
 .filterLabel-darkmode{
+  margin-left: 10%;
   background-color: #2b3743;
    -webkit-text-fill-color: white;
  width: 8.4em;
  border-radius: 4px 4px 0px 4px;
+ text-align: center;
 }
 .filter-darkmode{
    background-color: #2b3743;
     color:white;
     box-sizing: border-box;
-    padding: 5px;
-     margin-left: 10%;
-    border-radius: 4px;
-    border-color: lightslategrey;
-    width:10em;
-}
-.filter{
-  box-sizing: border-box;
-    padding: 0px 5% 5% 5% ;
-    border-radius: 4px;
+    padding: 2% 5% 0% 5%;
+    border-radius: 0px 4px 4px 4px;
     margin-left: 10%;
     border-color: transparent;
     width: 10em;
+    text-align: center;
+}
+.filter{
+  box-sizing: border-box;
+  padding: 2% 5% 0% 5%;
+    border-radius: 0px 4px 4px 4px;
+    margin-left: 10%;
+    border-color: transparent;
+    width: 10em;
+    text-align: center;
 }
 .cardsHoalder {
   display: flex;
